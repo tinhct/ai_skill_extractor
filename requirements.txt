@@ -1,0 +1,23 @@
+# pip3 install -r requirements.txt
+# for skills ectraction
+google-generativeai 
+pandas 
+python-dotenv 
+tqdm
+# for clustering
+sentence-transformers 
+scikit-learn 
+numpy 
+matplotlib
+# for analysis and visualization
+openpyxl
+networkx
+python-louvain
+matplotlib
+
+# for cluster visualization
+scikit-learn
+umap-learn
+seaborn
+plotly
+openpyxl

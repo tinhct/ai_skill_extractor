@@ -1,0 +1,16 @@
+category_code,frequency,definition,construct
+EXP_ROLE,197,Explicitly stated responsibilities and duties of the position,Employer Expectations
+SS-STAKEHOLDER,128,"Mention of stakeholder communication, management, or engagement",Core Competencies
+CORE-BUSINESS,126,"Mention of business acumen, strategy, or commercial awareness",Core Competencies
+PM-PLAN,121,"Mention of project planning, scheduling, or resource management",Core Competencies
+TECH-CONCEPT,111,"Mention of understanding or familiarity with AI/ML, data, math, ai product lifecycle concepts",Technical Competencies
+SS-LEADERSHIP,105,"Mention of team leadership, collaboration, or mentorship",Core Competencies
+EXP-INDUSTRY,91,Requirement for experience in a specific technical skills or roles or industry,Employer Expectations
+CONTEXT-COMPLEX,90,"Mention of managing complex, ambiguous, or innovative projects",Project Context
+TECH-OPS,72,"Mention of technical operations such as MLOps, CI/CD for AI, model deployment, or production systems",Technical Competencies
+TECH-HANDSON,68,"Mention of proficiency or experience with specific languages, platforms or data tools",Technical Competencies
+CORE-ADAPT,65,"Mention of adaptability, continuous learning, or thriving in a fast-paced environment",Core Competencies
+PM-RISK,50,"Mention of risk identification, assessment, or mitigation",Core Competencies
+CONTEXT-REG,50,Mention of specific regulations,Project Context
+EXP-PM-YRS,49,Specific number of years of project management experience required,Employer Expectations
+QUAL-PREF,44,Preferred or required educational degree from employers,Employer Expectations

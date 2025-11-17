@@ -1,0 +1,16 @@
+category_code,definition,frequency,percentage
+TECH-CONCEPT,"Mention of understanding or familiarity with AI/ML, data, math, ai product lifecycle concepts",44,93.61702127659575
+TECH-OPS,"Mention of technical operations such as MLOps, CI/CD for AI, model deployment, or production systems",37,78.72340425531915
+TECH-HANDSON,"Mention of proficiency or experience with specific languages, platforms or data tools",34,72.3404255319149
+PM-TOOL,Mention of proficiency or experience with specific project management tools,14,29.78723404255319
+EXP_ROLE,Explicitly stated responsibilities and duties of the position,3,6.382978723404255
+other,,3,6.382978723404255
+CONTEXT-ETHIC,"Mention of ethical AI, responsible AI, bias, fairness, or transparency",3,6.382978723404255
+EXP-INDUSTRY,Requirement for experience in a specific technical skill or role or industry,2,4.25531914893617
+CORE-BUSINESS,"Mention of business acumen, strategy, or commercial awareness",2,4.25531914893617
+CONTEXT-REG,Mention of specific regulations,2,4.25531914893617
+EXP-AI-YRS,Specific number of years of AI/ML project experience required,1,2.127659574468085
+SS-STAKEHOLDER,"Mention of stakeholder communication, management, or engagement",1,2.127659574468085
+PM-PLAN,"Mention of project planning, scheduling, or resource management",1,2.127659574468085
+SS-CONFLICT,Mention of conflict resolution or negotiation skills,1,2.127659574468085
+PM-RISK,"Mention of risk identification, assessment, or mitigation",1,2.127659574468085
