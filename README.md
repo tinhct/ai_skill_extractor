@@ -1,23 +1,30 @@
 # AI Skill Extractor
 
-This project analyzes AI Project Manager job postings and transforms them into structured skill data for thesis analysis. The pipeline combines LLM-based extraction, codebook-based categorization, embedding-based clustering, and hypothesis testing to quantify competency demands.
+AI Skill Extractor is a thesis analysis pipeline for AI Project Manager job ads. It turns raw job descriptions into structured skill data, codebook mappings, cluster assignments, and hypothesis-test outputs for downstream analysis and visualization.
 
-## What the project does
+## What it does
 
-1. Extracts skills and requirements from raw job posting text with dependency-parsing rules and Gemini.
+1. Extracts skills and requirements from job descriptions with Gemini and dependency-based parsing rules.
 2. Maps extracted phrases to codebook categories and values.
-3. Groups skills into semantic clusters with SentenceTransformer embeddings and K-Means.
-4. Produces CSV outputs for hypothesis testing and visualization.
+3. Clusters semantically similar skills with SentenceTransformer embeddings and K-Means.
+4. Produces CSV outputs for the thesis metrics, hypothesis tests, and exploratory analysis.
 
-## Main scripts
+## Repository Layout
 
-- `source/1. extract_skills_dependency_parsing.py`: extracts structured skills from job ads and writes `data/extracted_skills_dependency_parsing.json`.
-- `source/2. extract_category_codes_and_values.py`: maps extracted skills to codebook codes and writes `data/extracted_category_codes_and_values.json`.
-- `clustering.py`: builds embeddings from extracted skills, evaluates K-Means cluster quality, and writes `analysis/kmeans_evaluation.png` and `analysis/skill_clusters.csv`.
-- `source/test_hypotheses.py`: runs the thesis hypothesis analysis and writes CSV outputs in `output/`.
-- `source/3. master_metrics.py`, `source/4. top_15_competencies.py`, and `source/5. densities_Core_vs_Technical 2.py`: generate additional thesis metrics in `output/`.
+- `data/`: raw and intermediate datasets used by the pipeline.
+- `output/`: thesis CSV outputs from the analysis scripts.
+- `source/`: all Python scripts for extraction, mapping, clustering, and hypothesis testing.
+- `venv_py313/`: local Python 3.13 virtual environment bundled with the workspace.
 
-## Input data
+## Main Scripts
+
+- `source/1. extract_skills_dependency_parsing.py`: reads `data/job_ads.csv` and writes `data/extracted_skills_dependency_parsing.json`.
+- `source/2. extract_category_codes_and_values.py`: maps extracted skills to codebook values and writes `data/extracted_category_codes_and_values.json` and `data/extracted_category_codes.json`.
+- `source/clustering.py`: builds embeddings from `data/extracted_skills.json`, evaluates K-Means cluster quality, and writes `source/analysis/kmeans_evaluation.png` and `source/analysis/skill_clusters.csv`.
+- `source/test_hypotheses.py`: runs the main thesis hypothesis analysis and writes CSV outputs in `output/`.
+- `source/3. master_metrics.py`, `source/4. top_15_competencies.py`, and `source/5. densities_Core_vs_Technical 2.py`: generate additional thesis summary metrics in `output/`.
+
+## Input Files
 
 - `data/job_ads.csv`
 - `data/codebook.csv`
@@ -25,7 +32,17 @@ This project analyzes AI Project Manager job postings and transforms them into s
 - `data/extracted_category_codes.json`
 - `data/extracted_skills_dependency_parsing.json`
 
-## Outputs
+## Generated Outputs
+
+### Data and Analysis Artifacts
+
+- `data/extracted_skills_dependency_parsing.json`
+- `data/extracted_category_codes_and_values.json`
+- `data/extracted_category_codes.json`
+- `source/analysis/kmeans_evaluation.png`
+- `source/analysis/skill_clusters.csv`
+
+### Thesis CSV Outputs
 
 - `output/master_metrics.csv`
 - `output/top_15_competencies.csv`
@@ -36,8 +53,6 @@ This project analyzes AI Project Manager job postings and transforms them into s
 - `output/h3_co_occurrence_heatmap.csv`
 - `output/h4_h5_prevalence_results.csv`
 - `output/exploratory_skill_clusters.csv`
-- `analysis/kmeans_evaluation.png`
-- `analysis/skill_clusters.csv`
 
 ## Requirements
 
@@ -47,20 +62,31 @@ Install dependencies with:
 pip install -r requirements.txt
 ```
 
-The extraction pipeline expects a `GEMINI_API_KEY` in a local `.env` file.
+The extraction scripts expect a local `.env` file containing `GEMINI_API_KEY`.
 
-## Typical workflow
+If you want to use the bundled environment, activate it with:
 
 ```bash
-source venv/bin/activate
+source venv_py313/bin/activate
+```
+
+## Typical Workflow
+
+Run the scripts in this order:
+
+```bash
 python source/1.\ extract_skills_dependency_parsing.py
 python source/2.\ extract_category_codes_and_values.py
-python clustering.py
+python source/clustering.py
 python source/test_hypotheses.py
+python source/3.\ master_metrics.py
+python source/4.\ top_15_competencies.py
+python source/5.\ densities_Core_vs_Technical\ 2.py
 ```
 
 ## Notes
 
 - The project currently focuses on AI Project Manager job postings.
-- Clustering uses `sentence-transformers`, `scikit-learn`, and silhouette scoring to choose a suitable `k`.
-- The hypothesis scripts are designed to convert the extracted JSON into CSV tables for downstream analysis and visualization.
+- Clustering uses `sentence-transformers`, `scikit-learn`, and silhouette scoring to select a suitable `k`.
+- `source/clustering.py` creates its own `source/analysis/` folder if it does not already exist.
+- The numbered script filenames include spaces, so quoting or escaping them is required on the command line.
