@@ -21,3 +21,4 @@ umap-learn
 seaborn
 plotly
 openpyxl
+scipy

@@ -1,0 +1,16 @@
+Rank,Code,Definition,Pct_of_ads_with_code
+1,SS-STAKEHOLDER,"Skills in managing stakeholder relationships, ensuring business alignment, and securing executive buy-in",98.26%
+2,SS-LEADERSHIP,"Capabilities regarding team leadership, mentorship, motivation, and cross-functional collaboration",93.04%
+3,CORE-BUSINESS,"Demonstration of business acumen, strategic thinking, product strategy, and commercial awareness",88.70%
+4,PM-PLAN,"Competence in project planning, scheduling, resource allocation, and timeline management",87.39%
+5,PM-METHOD,"Proficiency in established project management frameworks, methodologies, and lifecycles (e.g., Agile, SAFe, Waterfall)",73.04%
+6,PM-RISK,"Ability to identify, assess, mitigate, and manage delivery risks and dependencies",73.04%
+7,TECH-CONCEPT,"Foundational theoretical knowledge of machine learning, data science concepts",72.61%
+8,TECH-OPS,"Knowledge of operational infrastructure, deployment pipelines, and CI/CD practices for ML models (MLOps)",60.43%
+9,CORE-ADAPT,"Capacity to adapt and thrive within fast-paced, ambiguous, or rapidly evolving environments",56.52%
+10,CORE-ADOPTION,"Driving organizational change, user adoption, and upskilling regarding AI literacy and tools",48.26%
+11,TECH-HANDSON,"Practical programming skills and proficiency with standard data science and engineering tools (e.g., Python, SQL, Amazon Web Services AWS)",46.52%
+12,PM-BUDGET,"Responsibility for financial oversight, budget management, forecasting, and cost control",42.61%
+13,SS-CONFLICT,"Proficiency in conflict resolution, negotiation, and navigating ambiguity",41.30%
+14,TECH-GENAI-CONCEPT,"Understanding of architectures, theories, and concepts specific to Generative AI and Large Language Models (LLMs)",40.87%
+15,PM-TOOL,"Technical proficiency with specific project management and collaboration software (e.g., Jira, Asana, Linear)",34.78%

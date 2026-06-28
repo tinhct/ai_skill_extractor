@@ -1,7 +1,0 @@
-Hypothesis,Result_Percentage,Target_Percentage,Supported
-H3: Hybrid Profile (>75%),91.49,75,True
-H4a: Advanced Degree (>40%),29.79,40,False
-H4b: Certification (>40%),31.91,40,False
-H4 Main: Degree or Cert (>60%),42.55,60,False
-H5a: Ethics/Governance (>33%),51.06,33,True
-H5b: Complexity (>20%),85.11,20,True
