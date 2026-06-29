@@ -1,4 +1,4 @@
-# AI Skill Extractor
+# Skill Extractor
 
 AI Skill Extractor is a thesis analysis pipeline for AI Project Manager job ads. It turns raw job descriptions into structured skill data, codebook mappings, cluster assignments, and hypothesis-test outputs for downstream analysis and visualization.
 
